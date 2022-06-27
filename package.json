@@ -21,6 +21,7 @@
     "koa": "^2.13.4",
     "koa-mount": "^4.0.0",
     "nodemon": "^2.0.18",
+    "protocol-buffers": "^5.0.0",
     "webpack": "^5.73.0"
   }
 }

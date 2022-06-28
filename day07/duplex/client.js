@@ -1,7 +1,7 @@
 /* 
 全双工通信存在的问题
   时序问题： 请求顺序和返回顺序不一定一一对应 --> 使用包序号
-  包不完整：太长了，可以分隔
+  包不完整：太长了，可以分隔 --> 使用包头记录body的长度
  */
 const prorobuffs = require('protocol-buffers')
 const fs = require('fs')
@@ -10,7 +10,6 @@ const message = prorobuffs(fs.readFileSync(__dirname+ '/test.proto'))
 
 const net = require('net')
 const socket = new net.Socket({})
-let requestCount = 5
 let seq = 0
 
 const getRandomid = () => {
@@ -20,8 +19,19 @@ const getRandomid = () => {
 
 const encode = () => {
   const id = getRandomid()
-  console.log('client seq:', seq)
-  return message.Request.encode({ id, seq: seq++ })
+
+  const requestBody = {
+    id
+  }
+  const requestHeader = {
+    bodyLength: message.RequestBody.encode(requestBody).length,
+    seq: seq++
+  }
+
+ return  message.Request.encode({
+    header: requestHeader,
+    body: requestBody
+  })
 }
 
 socket.connect({
@@ -29,9 +39,11 @@ socket.connect({
   port: 4000
 })
 
-setInterval(() => {
-  socket.write(encode())
-}, 500)
+// setInterval(() => {
+//   socket.write(encode())
+// }, 500)
+
+socket.write(encode())
 
 socket.on('data', (buffer) => {
   console.log('client', message.Response.decode(buffer)) 

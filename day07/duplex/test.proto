@@ -1,10 +1,27 @@
 message Response {
-  required int32 seq = 1;
-  required string id = 2;
-  required string name =3;
+  required ResponseHeader header = 1;
+  required ResponseBody body = 2;
 }
 
 message Request {
+  required RequestHeader header = 1;
+  required RequestBody body = 2;
+}
+
+message RequestHeader {
   required int32 seq = 1;
-  required string id = 2;
+  required int32 bodyLength = 2;
+}
+
+message RequestBody {
+  required string id = 1;
+}
+
+message ResponseHeader {
+  required int32 seq = 1;
+  required int32 bodyLength = 2;
+}
+
+message ResponseBody {
+  required string name =1;
 }

@@ -12,21 +12,30 @@ const menus = {
   '8905': '花雕醉鸡'
 }
 
+const encode = (id, seq) => {
+  const responseBody = {
+    name: menus[id]
+  }
+  const responseHeader = {
+    seq,
+    bodyLength: message.ResponseBody.encode(responseBody).length
+  }
+
+  return message.Response.encode({
+    header: responseHeader,
+    body: responseBody
+  })
+ 
+}
+
 const server = net.createServer((socket) => {
   socket.on('data', buffer => {
     // console.log('server:', buffer,  message.Request.decode(buffer))
-    const { id, seq } = message.Request.decode(buffer)
+    console.log(message.Request.decode(buffer))
+    const { header: { seq, bodyLength}, body: { id } } = message.Request.decode(buffer)
     setTimeout(() => {
-      socket.write(message.Response.encode({
-        id,
-        seq,
-        name: menus[id]
-      }))
+      socket.write(encode(id, seq))
     }, 100 + (Math.random() * 1000))
-    // socket.write(message.Response.encode({
-    //   id,
-    //   name: menus[id]
-    // }))
   })
 })
 

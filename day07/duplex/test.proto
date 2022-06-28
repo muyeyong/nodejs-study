@@ -1,0 +1,10 @@
+message Response {
+  required int32 seq = 1;
+  required string id = 2;
+  required string name =3;
+}
+
+message Request {
+  required int32 seq = 1;
+  required string id = 2;
+}

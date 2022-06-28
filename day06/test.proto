@@ -1,4 +1,4 @@
 message Book {
-  required float price = 18.88;
+  required float price = 18;
   required float number = 89;
 }

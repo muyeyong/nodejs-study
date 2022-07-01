@@ -1,0 +1,1 @@
+我是${name}, ${include('./b.html')}

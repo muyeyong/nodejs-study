@@ -2,6 +2,9 @@ const fs = require('fs');
 const vm = require('vm');
 
 const templateCache = {};
+ // './b.html' : { data: 渲染的数据. template: 模板, result: 渲染结果 }
+
+
 
 // 创建模板渲染context
 const templateContext = vm.createContext({
@@ -29,5 +32,6 @@ function createTemplate(templatePath) {
 
     return templateCache[templatePath]
 }
+
 
 module.exports = createTemplate

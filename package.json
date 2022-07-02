@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/muyeyong/nodejs-study#readme",
   "dependencies": {
+    "easy_sock": "^0.4.1",
     "express": "^4.18.1",
     "graphql": "^15.8.0",
     "koa": "^2.13.4",

@@ -539,6 +539,13 @@
   "resolved" "https://registry.npmmirror.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz"
   "version" "2.0.0"
 
+"debug@^2.2.0", "debug@2.6.9":
+  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
+  "resolved" "https://registry.npmmirror.com/debug/-/debug-2.6.9.tgz"
+  "version" "2.6.9"
+  dependencies:
+    "ms" "2.0.0"
+
 "debug@^3.1.0":
   "integrity" "sha1-clgLfpFF+zm2Z2+cXl+xALk0F5o="
   "resolved" "http://npmjs.leycloud.com/debug/-/debug-3.2.7.tgz"
@@ -573,13 +580,6 @@
   "version" "4.3.4"
   dependencies:
     "ms" "2.1.2"
-
-"debug@2.6.9":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.npmmirror.com/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
 
 "decompress-response@^3.3.0":
   "integrity" "sha512-BzRPQuY1ip+qDonAOz42gRm/pg9F768C+npV/4JOsxRC2sq+Rlk+Q4ZCAsOhnIaMrgarILY+RMUIvMmmX1qAEA=="
@@ -634,6 +634,13 @@
   "integrity" "sha512-CEj8FwwNA4cVH2uFCoHUrmojhYh1vmCdOaneKJXwkeY1i9jnlslVo9dx+hQ5Hl9GnH/Bwy/IjxAyOePyPKYnzA=="
   "resolved" "https://registry.npmmirror.com/duplexer3/-/duplexer3-0.1.4.tgz"
   "version" "0.1.4"
+
+"easy_sock@^0.4.1":
+  "integrity" "sha512-/psBK/lT5J0HI+/f5FAOsz1HAK+TOtN7ZrVyBOyZ9hrVjmffC+Yxcinw1SFChvGvS0kuPl+czYq2ng258q2Rvg=="
+  "resolved" "https://registry.npmmirror.com/easy_sock/-/easy_sock-0.4.1.tgz"
+  "version" "0.4.1"
+  dependencies:
+    "debug" "^2.2.0"
 
 "ee-first@1.1.1":
   "integrity" "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow=="

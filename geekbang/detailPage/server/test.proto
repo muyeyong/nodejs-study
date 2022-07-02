@@ -1,0 +1,14 @@
+message People {
+  required int32 id = 1;
+  required string name = 2;
+  required int32 age = 3;
+  required string sex = 4;
+}
+
+message Request {
+  required int32 id = 1;
+}
+
+message Response {
+  required People people = 1;
+}

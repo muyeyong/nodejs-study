@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id='list'></ul>
+  <script>
+    fetch('./query?query={comment{id, title, praiseNum}}').then(res => res.json()).then(res => 
+      document.getElementById('list').innerHTML = res.data.comment.map(item => {
+        return `<li>
+         <span> ${item.id} </span>
+         <span> ${item.title} </span>
+         <span class='praise_num'> ${item.praiseNum}</sapn>
+         <button class='_praise' data-id=${item.id}> 点赞 </button>
+        </li>`
+      })
+    )
+    document.getElementById('list').addEventListener('click', e => {
+      fetch('./query', {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "query": "mutation { praise(id:"+ e.target.getAttribute("data-id") +")}" // `mutation { praise(id: ${e.target.getAttribute("data-id")})}`
+        })
+      }).then(res => res.json()).then(res => {
+        console.log( e.target.parentElement)
+        e.target.parentElement.querySelector('._praise').innerHTML = res.data.praise
+      })
+    })
+  </script>
+</body>
+</html>

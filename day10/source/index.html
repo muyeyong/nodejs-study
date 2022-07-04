@@ -29,7 +29,6 @@
           "query": "mutation { praise(id:"+ e.target.getAttribute("data-id") +")}" // `mutation { praise(id: ${e.target.getAttribute("data-id")})}`
         })
       }).then(res => res.json()).then(res => {
-        console.log( e.target.parentElement)
         e.target.parentElement.querySelector('._praise').innerHTML = res.data.praise
       })
     })

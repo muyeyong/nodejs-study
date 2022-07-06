@@ -4,6 +4,7 @@
  */
 
 const vm = require('vm')
+const fs = require('fs')
 
 // 基本使用
 // const res =  vm.runInNewContext('`我是${name}`', { name: 123 })
@@ -29,18 +30,18 @@ const vm = require('vm')
 
 const templateMap = {
   a: '`我是A，我在引用${include("b")}`',
-  b: '`我是B，我在引用${include("a")}`',
+  b: '`我是B，我在引用${include("c")}`',
   c: '`我是C`'
 }
 
 const templateCache = {}
 
-const context = {
+const context = vm.createContext({
   include: function(name) {
     const template = templateCache[name] || createTemplate(name)
     return template()
   }
-}
+}) 
 
 function createTemplate(templatePath) {
 
@@ -67,8 +68,20 @@ function createTemplate(templatePath) {
 
 // console.log(res3)
 // console.log(templateMap['a']())
-console.log(createTemplate('a'))
+console.log(createTemplate('a')())
 
 // templateMap['a']()
 
 // templateMap[a]() // ==> 输出结果
+
+// const aString = "`我是解耦, ${data}`"
+
+const aTest = vm.runInContext(
+  `(function (data) {
+    with (data) {
+        return \`${fs.readFileSync(__dirname+'/b.html')}\`
+    }
+})`, vm.createContext({}))
+
+console.log(aTest({ name: '123'}))
+// vm.runInContext("`123${key}`", vm.createContext({ key: 456}))

@@ -1,6 +1,6 @@
 require("@babel/register")({
   presets: ['@babel/preset-react']
-})
+}) // 这里不需要也可以？
 
 const renderReact = require('./renderReact')
 const react = require('react')
@@ -15,6 +15,7 @@ const App = require('./index.jsx')
 // //     </div>)
 // // }
 
+console.log(App)
 console.log(ReactDomServe.renderToString(react.createElement(App)))
 
 // renderReact(<App />)

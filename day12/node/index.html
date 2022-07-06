@@ -11,5 +11,9 @@
   <div id='reactapp'>
     ${renderString}
   </div>
+  <script>
+    window.reactInitData = ${reactData ? JSON.stringify(reactData) : ''};
+  </script>
+  <script src="./static/main.js"></script>
 </body>
 </html>

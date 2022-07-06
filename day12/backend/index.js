@@ -9,7 +9,6 @@ const server = require('./rpc')(schema.Request, schema.Response)
 server.createServer((request, response) => {
   const { order = 0, sort = 'id'} = request.body
   // order >= 0 升序  < 0 降序
-  console.log('back end')
   const result = data.sort((a, b) => {
    return order >= 0 ? a[sort] - b[sort] : b[sort] - a[sort]
   })

@@ -1,0 +1,13 @@
+message List {
+  required int32 id = 1;
+  required string title = 2;
+  required int32 price = 3;
+}
+message Response {
+  repeated  List list = 1;
+}
+
+message Request {
+  required string sort = 1;
+  optional string order = 2;
+}

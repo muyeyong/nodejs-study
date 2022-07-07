@@ -1,0 +1,950 @@
+Statistical profiling result from isolate-0x138008000-24751-v8.log, (3160 ticks, 14 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     78    2.5%          /usr/lib/system/libsystem_malloc.dylib
+     22    0.7%          /usr/lib/system/libsystem_pthread.dylib
+     15    0.5%          /usr/lib/system/libsystem_c.dylib
+     10    0.3%          /usr/lib/libc++.1.dylib
+      8    0.3%          /usr/lib/system/libsystem_platform.dylib
+      5    0.2%          /usr/lib/system/libdyld.dylib
+      3    0.1%          /usr/lib/system/libsystem_kernel.dylib
+      1    0.0%          /usr/lib/libobjc.A.dylib
+      1    0.0%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     14    0.4%    0.5%  LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     11    0.3%    0.4%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     10    0.3%    0.3%  LazyCompile: *Readable node:internal/streams/readable:181:18
+      9    0.3%    0.3%  LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      8    0.3%    0.3%  LazyCompile: *write_ node:_http_outgoing:730:16
+      8    0.3%    0.3%  LazyCompile: *resolvePath /Users/tornado/code/node/nodejs-study/node_modules/resolve-path/index.js:45:22
+      8    0.3%    0.3%  LazyCompile: *resolve node:path:1091:10
+      6    0.2%    0.2%  LazyCompile: *socketOnDrain node:_http_server:559:23
+      6    0.2%    0.2%  LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+      6    0.2%    0.2%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      5    0.2%    0.2%  LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      5    0.2%    0.2%  LazyCompile: *removeListener node:events:687:28
+      5    0.2%    0.2%  LazyCompile: *normalize node:path:1127:12
+      5    0.2%    0.2%  LazyCompile: *join node:path:1166:7
+      5    0.2%    0.2%  LazyCompile: *emitReadable_ node:internal/streams/readable:574:23
+      5    0.2%    0.2%  LazyCompile: *Readable.on node:internal/streams/readable:875:33
+      4    0.1%    0.1%  LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+      4    0.1%    0.1%  LazyCompile: *wrapper node:fs:658:19
+      4    0.1%    0.1%  LazyCompile: *clearIncoming node:_http_server:749:23
+      4    0.1%    0.1%  Function: ^<anonymous> node:internal/fs/streams:114:34
+      3    0.1%    0.1%  LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+      3    0.1%    0.1%  LazyCompile: *socketListenerWrap node:_http_server:1001:37
+      3    0.1%    0.1%  LazyCompile: *set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      3    0.1%    0.1%  LazyCompile: *resetBuffer node:internal/streams/writable:202:21
+      3    0.1%    0.1%  LazyCompile: *processPromiseRejections node:internal/process/promises:197:34
+      3    0.1%    0.1%  LazyCompile: *pipeOnDrainFunctionResult node:internal/streams/readable:817:44
+      3    0.1%    0.1%  LazyCompile: *parserOnIncoming node:_http_server:852:26
+      3    0.1%    0.1%  LazyCompile: *ondata node:internal/streams/readable:752:18
+      3    0.1%    0.1%  LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      3    0.1%    0.1%  LazyCompile: *attachFinishedListener /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:91:33
+      3    0.1%    0.1%  LazyCompile: *Readable.removeListener node:internal/streams/readable:905:45
+      3    0.1%    0.1%  LazyCompile: *<anonymous> node:internal/validators:191:40
+      2    0.1%    0.1%  RegExp: ^\s*([^\s;]+)\s*(?:;(.*))?$
+      2    0.1%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      2    0.1%    0.1%  RegExp: (?:^|\W)chunked(?:$|\W)
+      2    0.1%    0.1%  LazyCompile: *setRequestTimeout node:_http_server:762:27
+      2    0.1%    0.1%  LazyCompile: *set type /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:310:11
+      2    0.1%    0.1%  LazyCompile: *runInAsyncScope node:async_hooks:195:18
+      2    0.1%    0.1%  LazyCompile: *resume_ node:internal/streams/readable:985:17
+      2    0.1%    0.1%  LazyCompile: *onwrite node:internal/streams/writable:425:17
+      2    0.1%    0.1%  LazyCompile: *onSocketResume node:_http_server:965:24
+      2    0.1%    0.1%  LazyCompile: *noop node:internal/util/debuglog:47:14
+      2    0.1%    0.1%  LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+      2    0.1%    0.1%  LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:148:27
+      2    0.1%    0.1%  LazyCompile: *get node:_http_incoming:108:16
+      2    0.1%    0.1%  LazyCompile: *get header /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:47:13
+      2    0.1%    0.1%  LazyCompile: *first /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:24:15
+      2    0.1%    0.1%  LazyCompile: *doWrite node:internal/streams/writable:398:17
+      2    0.1%    0.1%  LazyCompile: *constructNT node:internal/streams/destroy:250:21
+      2    0.1%    0.1%  LazyCompile: *connectionListenerInternal node:_http_server:443:36
+      2    0.1%    0.1%  LazyCompile: *cleanup /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:58:19
+      2    0.1%    0.1%  LazyCompile: *_storeHeader node:_http_outgoing:374:22
+      2    0.1%    0.1%  LazyCompile: *_copyActual node:buffer:242:21
+      2    0.1%    0.1%  LazyCompile: *_addListener node:events:548:22
+      2    0.1%    0.1%  LazyCompile: *WritableState node:internal/streams/writable:77:23
+      2    0.1%    0.1%  LazyCompile: *Socket.resume node:net:630:35
+      2    0.1%    0.1%  LazyCompile: *Socket._writev node:net:801:36
+      2    0.1%    0.1%  Function: ^listener /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:162:21
+      2    0.1%    0.1%  Function: ^debug /Users/tornado/code/node/nodejs-study/node_modules/koa-send/node_modules/debug/src/common.js:66:17
+      1    0.0%    0.0%  RegExp: ^([a-zA-Z]:|[\\\/]{2}[^\\\/]+[\\\/]+[^\\\/]+)?([\\\/])?([\s\S]*?)$
+      1    0.0%    0.0%  RegExp: (?:^|[\\/])\.\.(?:[\\/]|$)
+      1    0.0%    0.0%  LazyCompile: *updateOutgoingData node:_http_server:554:28
+      1    0.0%    0.0%  LazyCompile: *toInteger node:buffer:190:19
+      1    0.0%    0.0%  LazyCompile: *socketOnClose node:_http_server:588:23
+      1    0.0%    0.0%  LazyCompile: *set status /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:83:13
+      1    0.0%    0.0%  LazyCompile: *set /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:461:6
+      1    0.0%    0.0%  LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1    0.0%    0.0%  LazyCompile: *resOnFinish node:_http_server:788:21
+      1    0.0%    0.0%  LazyCompile: *parse node:path:1449:8
+      1    0.0%    0.0%  LazyCompile: *onconnection node:net:1544:22
+      1    0.0%    0.0%  LazyCompile: *onceWrapper node:events:634:21
+      1    0.0%    0.0%  LazyCompile: *onParserExecuteCommon node:_http_server:691:31
+      1    0.0%    0.0%  LazyCompile: *onParserExecute node:_http_server:634:25
+      1    0.0%    0.0%  LazyCompile: *onDestroy node:internal/streams/destroy:73:21
+      1    0.0%    0.0%  LazyCompile: *nop node:_http_outgoing:86:13
+      1    0.0%    0.0%  LazyCompile: *maybeReadMore node:internal/streams/readable:602:23
+      1    0.0%    0.0%  LazyCompile: *listenerCount node:events:852:23
+      1    0.0%    0.0%  LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      1    0.0%    0.0%  LazyCompile: *getStatsFromBinding node:internal/fs/utils:530:29
+      1    0.0%    0.0%  LazyCompile: *getObserverType node:internal/perf/observe:117:25
+      1    0.0%    0.0%  LazyCompile: *get writable /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:525:15
+      1    0.0%    0.0%  LazyCompile: *get path /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/request.js:144:11
+      1    0.0%    0.0%  LazyCompile: *endReadable node:internal/streams/readable:1329:21
+      1    0.0%    0.0%  LazyCompile: *encodings /Users/tornado/code/node/nodejs-study/node_modules/negotiator/index.js:52:52
+      1    0.0%    0.0%  LazyCompile: *emitReadable node:internal/streams/readable:563:22
+      1    0.0%    0.0%  LazyCompile: *emitCloseNT node:internal/streams/destroy:126:21
+      1    0.0%    0.0%  LazyCompile: *emit node:events:470:44
+      1    0.0%    0.0%  LazyCompile: *destroy node:internal/streams/destroy:32:17
+      1    0.0%    0.0%  LazyCompile: *destroy /Users/tornado/code/node/nodejs-study/node_modules/destroy/index.js:35:18
+      1    0.0%    0.0%  LazyCompile: *debug /Users/tornado/code/node/nodejs-study/node_modules/koa-send/node_modules/debug/src/common.js:66:17
+      1    0.0%    0.0%  LazyCompile: *dateFromMs node:internal/fs/utils:460:20
+      1    0.0%    0.0%  LazyCompile: *createUnsafeBuffer node:internal/buffer:1059:28
+      1    0.0%    0.0%  LazyCompile: *close node:internal/fs/streams:108:15
+      1    0.0%    0.0%  LazyCompile: *assignSocket node:_http_server:239:62
+      1    0.0%    0.0%  LazyCompile: *arrayClone node:events:877:20
+      1    0.0%    0.0%  LazyCompile: *afterWriteTick node:internal/streams/writable:482:24
+      1    0.0%    0.0%  LazyCompile: *afterShutdown node:net:451:23
+      1    0.0%    0.0%  LazyCompile: *addListener node:events:616:58
+      1    0.0%    0.0%  LazyCompile: *_flushOutput node:_http_outgoing:951:63
+      1    0.0%    0.0%  LazyCompile: *Socket node:net:283:16
+      1    0.0%    0.0%  LazyCompile: *Readable.unpipe node:internal/streams/readable:840:37
+      1    0.0%    0.0%  LazyCompile: *Readable.resume node:internal/streams/readable:964:37
+      1    0.0%    0.0%  LazyCompile: *ReadStream node:internal/fs/streams:148:20
+      1    0.0%    0.0%  LazyCompile: *EventEmitter.init node:events:324:29
+      1    0.0%    0.0%  LazyCompile: *Accepts.encoding.Accepts.encodings /Users/tornado/code/node/nodejs-study/node_modules/accepts/index.js:127:40
+      1    0.0%    0.0%  LazyCompile: *Accepts /Users/tornado/code/node/nodejs-study/node_modules/accepts/index.js:32:18
+      1    0.0%    0.0%  LazyCompile: *<anonymous> node:net:685:24
+      1    0.0%    0.0%  LazyCompile: *<anonymous> node:internal/validators:73:3
+      1    0.0%    0.0%  LazyCompile: *<anonymous> node:internal/fs/utils:886:42
+      1    0.0%    0.0%  LazyCompile: *<anonymous> node:internal/fs/utils:636:3
+      1    0.0%    0.0%  LazyCompile: *<anonymous> node:fs:188:10
+      1    0.0%    0.0%  LazyCompile: *<anonymous> node:buffer:348:36
+      1    0.0%    0.0%  Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1    0.0%    0.0%  Function: ^toNamespacedPath node:path:1266:19
+      1    0.0%    0.0%  Function: ^socketOnDrain node:_http_server:559:23
+      1    0.0%    0.0%  Function: ^set /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:461:6
+      1    0.0%    0.0%  Function: ^removeListener node:events:687:28
+      1    0.0%    0.0%  Function: ^removeAllListeners node:events:747:32
+      1    0.0%    0.0%  Function: ^readSync node:fs:684:18
+      1    0.0%    0.0%  Function: ^nop node:internal/streams/writable:73:13
+      1    0.0%    0.0%  Function: ^isEncoding node:buffer:529:40
+      1    0.0%    0.0%  Function: ^hasObserver node:internal/perf/observe:474:21
+      1    0.0%    0.0%  Function: ^getStderr node:internal/bootstrap/switches/is_main_thread:137:19
+      1    0.0%    0.0%  Function: ^getStatsFromBinding node:internal/fs/utils:530:29
+      1    0.0%    0.0%  Function: ^get node:internal/streams/readable:1203:18
+      1    0.0%    0.0%  Function: ^get node:internal/streams/readable:1166:8
+      1    0.0%    0.0%  Function: ^get node:_http_incoming:108:16
+      1    0.0%    0.0%  Function: ^freeParser node:_http_common:192:20
+      1    0.0%    0.0%  Function: ^fastparse /Users/tornado/code/node/nodejs-study/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.0%  Function: ^emitCloseNT node:_http_server:843:21
+      1    0.0%    0.0%  Function: ^emit node:events:470:44
+      1    0.0%    0.0%  Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    0.0%    0.0%  Function: ^clearBuffer node:internal/streams/writable:529:21
+      1    0.0%    0.0%  Function: ^cleanup node:internal/streams/readable:699:19
+      1    0.0%    0.0%  Function: ^callback /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:53:20
+      1    0.0%    0.0%  Function: ^assignSocket node:_http_server:239:62
+      1    0.0%    0.0%  Function: ^afterWrite node:internal/streams/writable:487:20
+      1    0.0%    0.0%  Function: ^_write node:internal/streams/writable:283:16
+      1    0.0%    0.0%  Function: ^_getMaxListeners node:events:401:26
+      1    0.0%    0.0%  Function: ^_dump node:_http_incoming:364:49
+      1    0.0%    0.0%  Function: ^Writable.write node:internal/streams/writable:333:36
+      1    0.0%    0.0%  Function: ^Server._emitCloseIfDrained node:net:1659:48
+      1    0.0%    0.0%  Function: ^ReadStream node:internal/fs/streams:148:20
+      1    0.0%    0.0%  Function: ^EventEmitter.init node:events:324:29
+      1    0.0%    0.0%  Function: ^Accepts.encoding.Accepts.encodings /Users/tornado/code/node/nodejs-study/node_modules/accepts/index.js:127:40
+      1    0.0%    0.0%  Function: ^<anonymous> node:internal/util:347:32
+      1    0.0%    0.0%  Function: ^<anonymous> node:fs:197:10
+
+ [C++]:
+   ticks  total  nonlib   name
+   1473   46.6%   48.8%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+    352   11.1%   11.7%  T _semaphore_destroy
+    146    4.6%    4.8%  T _posix_spawnattr_setflags
+    121    3.8%    4.0%  T _connect$NOCANCEL
+     95    3.0%    3.1%  T _mach_port_extract_member
+     89    2.8%    2.9%  T _mach_port_insert_member
+     47    1.5%    1.6%  T _mach_vm_protect
+     44    1.4%    1.5%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+     36    1.1%    1.2%  T _sigprocmask
+     32    1.0%    1.1%  T ___bsdthread_terminate
+     24    0.8%    0.8%  T _mach_port_insert_right
+     23    0.7%    0.8%  T _setpriority
+     19    0.6%    0.6%  T __kernelrpc_mach_port_get_refs
+     17    0.5%    0.6%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     17    0.5%    0.6%  T _mach_timebase_info_trap
+     12    0.4%    0.4%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     11    0.3%    0.4%  T _mmap
+     10    0.3%    0.3%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.3%    0.3%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.3%    0.3%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.3%    0.3%  T _host_get_io_master
+      9    0.3%    0.3%  T __kernelrpc_mach_port_move_member_trap
+      7    0.2%    0.2%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    0.2%    0.2%  t __os_once_gate_wait
+      5    0.2%    0.2%  t __os_nospin_lock_unlock_slow
+      5    0.2%    0.2%  T node::InternalMakeCallback(node::Environment*, v8::Local<v8::Object>, v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*, node::async_context)
+      4    0.1%    0.1%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.1%    0.1%  T _chmod
+      3    0.1%    0.1%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      3    0.1%    0.1%  t std::__1::__hash_table<unsigned long, std::__1::hash<unsigned long>, std::__1::equal_to<unsigned long>, std::__1::allocator<unsigned long> >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<unsigned long, void*>*>)
+      3    0.1%    0.1%  t __os_nospin_lock_lock_slow
+      3    0.1%    0.1%  T node::fs::AfterInteger(uv_fs_s*)
+      3    0.1%    0.1%  T _task_set_special_port
+      2    0.1%    0.1%  t std::__1::vector<unsigned long, std::__1::allocator<unsigned long> >::__append(unsigned long)
+      2    0.1%    0.1%  t node::BaseObject::decrease_refcount()
+      2    0.1%    0.1%  T node::fs::FSReqCallback::Resolve(v8::Local<v8::Value>)
+      2    0.1%    0.1%  T node::fs::FSReqBase::~FSReqBase()
+      2    0.1%    0.1%  T node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      2    0.1%    0.1%  T node::InternalCallbackScope::Close()
+      2    0.1%    0.1%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T node::AsyncWrap::EmitTraceEventDestroy()
+      2    0.1%    0.1%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      2    0.1%    0.1%  T _pthread_cond_init
+      2    0.1%    0.1%  T _posix_spawn
+      1    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.0%    0.0%  t std::__1::__hash_table<unsigned long long, std::__1::hash<unsigned long long>, std::__1::equal_to<unsigned long long>, std::__1::allocator<unsigned long long> >::__rehash(unsigned long)
+      1    0.0%    0.0%  t std::__1::__hash_iterator<std::__1::__hash_node<void*, void*>*> std::__1::__hash_table<void*, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<void*> >::find<void*>(void* const&)
+      1    0.0%    0.0%  t std::__1::__hash_iterator<std::__1::__hash_node<node::CleanupHookCallback, void*>*> std::__1::__hash_table<node::CleanupHookCallback, node::CleanupHookCallback::Hash, node::CleanupHookCallback::Equal, std::__1::allocator<node::CleanupHookCallback> >::find<node::CleanupHookCallback>(node::CleanupHookCallback const&)
+      1    0.0%    0.0%  t non-virtual thunk to node::PerIsolatePlatformData::NonNestableDelayedTasksEnabled() const
+      1    0.0%    0.0%  t node::Environment::RunAndClearNativeImmediates(bool)::$_7::operator()(node::CallbackQueue<void, node::Environment*>*) const
+      1    0.0%    0.0%  t node::CustomBufferJSListener::OnStreamDestroy()
+      1    0.0%    0.0%  t node::AsyncHooks::pop_async_context(double)
+      1    0.0%    0.0%  t __pthread_terminate
+      1    0.0%    0.0%  t __pthread_mutex_lock_init_slow
+      1    0.0%    0.0%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::fs::FSReqCallback::SetReturnValue(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::errors::TryCatchScope::~TryCatchScope()
+      1    0.0%    0.0%  T node::Environment::Environment(node::IsolateData*, v8::Isolate*, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&, std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&, node::EnvSerializeInfo const*, node::EnvironmentFlags::Flags, node::ThreadId)
+      1    0.0%    0.0%  T node::Buffer::Data(v8::Local<v8::Value>)
+      1    0.0%    0.0%  T node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventBefore()
+      1    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+      1    0.0%    0.0%  T node::AsyncWrap::EmitDestroy(node::Environment*, double)
+      1    0.0%    0.0%  T _semaphore_signal
+      1    0.0%    0.0%  T __kernelrpc_mach_vm_map
+      1    0.0%    0.0%  T ___libplatform_init
+
+ [Summary]:
+   ticks  total  nonlib   name
+    310    9.8%   10.3%  JavaScript
+   2693   85.2%   89.3%  C++
+    455   14.4%   15.1%  GC
+    143    4.5%          Shared libraries
+     14    0.4%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1028   57.1%   32.5%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+    350   19.5%   11.1%  T _semaphore_destroy
+    117    6.5%    3.7%  T _connect$NOCANCEL
+     95    5.3%    3.0%  T _mach_port_extract_member
+     44    2.4%    1.4%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+     19    1.1%    0.6%  T _sigprocmask
+     18    1.0%    0.6%  T _mach_port_insert_member
+     17    0.9%    0.5%  T node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     17    0.9%    0.5%  T _mach_port_insert_right
+     12    0.7%    0.4%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+     11    0.6%    0.3%  T _mmap
+     10    0.6%    0.3%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.5%    0.3%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.5%    0.3%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.5%    0.3%  T __kernelrpc_mach_port_move_member_trap
+      7    0.4%    0.2%  t node::fs::Stat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.2%    0.1%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.2%    0.1%  T __kernelrpc_mach_port_get_refs
+      2    0.1%    0.1%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      2    0.1%    0.1%  t __os_nospin_lock_lock_slow
+      2    0.1%    0.1%  T node::NodeArrayBufferAllocator::Allocate(unsigned long)
+      2    0.1%    0.1%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T _pthread_cond_init
+      1    0.1%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      1    0.1%    0.0%  t std::__1::__hash_table<unsigned long long, std::__1::hash<unsigned long long>, std::__1::equal_to<unsigned long long>, std::__1::allocator<unsigned long long> >::__rehash(unsigned long)
+      1    0.1%    0.0%  t __pthread_terminate
+      1    0.1%    0.0%  t __pthread_mutex_lock_init_slow
+      1    0.1%    0.0%  T node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  T node::fs::FSReqCallback::SetReturnValue(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  T node::Buffer::Data(v8::Local<v8::Value>)
+      1    0.1%    0.0%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      1    0.1%    0.0%  T ___libplatform_init
+      1    0.1%    0.0%  T ___bsdthread_terminate
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1473   46.6%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     67    4.5%    LazyCompile: *Socket node:net:283:16
+     56   83.6%      LazyCompile: *onconnection node:net:1544:22
+     11   16.4%      Function: ^onconnection node:net:1544:22
+     65    4.4%    LazyCompile: *nextTick node:internal/process/task_queues:104:18
+     20   30.8%      LazyCompile: *write_ node:_http_outgoing:730:16
+     20  100.0%        LazyCompile: *ondata node:internal/streams/readable:752:18
+     19   95.0%          LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+     17   89.5%            LazyCompile: *wrapper node:fs:658:19
+      1    5.3%            LazyCompile: *<anonymous> node:internal/fs/streams:248:41
+      1    5.3%            Function: ^Readable.push node:internal/streams/readable:227:35
+      1    5.0%          Function: ^emit node:events:470:44
+      1  100.0%            Function: ^addChunk node:internal/streams/readable:304:18
+     17   26.2%      LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+     17  100.0%        LazyCompile: *wrapper node:fs:658:19
+      6    9.2%      LazyCompile: *afterShutdown node:net:451:23
+      6    9.2%      LazyCompile: *Readable node:internal/streams/readable:181:18
+      6  100.0%        LazyCompile: *ReadStream node:internal/fs/streams:148:20
+      6  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      6  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    7.7%      LazyCompile: *end node:_http_outgoing:833:45
+      5  100.0%        Function: ^onend node:internal/streams/readable:691:17
+      5  100.0%          LazyCompile: *onceWrapper node:events:634:21
+      5  100.0%            LazyCompile: *endReadableNT node:internal/streams/readable:1339:23
+      5    7.7%      Function: ^onDestroy node:internal/streams/destroy:73:21
+      4   80.0%        LazyCompile: *destroy node:internal/streams/destroy:32:17
+      2   50.0%          LazyCompile: *onceWrapper node:events:634:21
+      1   50.0%            LazyCompile: *finish node:internal/streams/writable:745:16
+      1   50.0%            LazyCompile: *emit node:events:470:44
+      2   50.0%          LazyCompile: *endReadableNT node:internal/streams/readable:1339:23
+      2  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1   20.0%        Function: ^<anonymous> node:internal/fs/streams:114:34
+      1  100.0%          LazyCompile: *<anonymous> node:fs:188:10
+      2    3.1%      Function: ^resOnFinish node:_http_server:788:21
+      2  100.0%        LazyCompile: *emit node:events:470:44
+      2  100.0%          Function: ^onFinish node:_http_outgoing:828:18
+      2  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.5%      Function: ^onFinish node:internal/streams/writable:665:20
+      1  100.0%        Function: ^afterShutdown node:net:451:23
+      1    1.5%      Function: ^endReadable node:internal/streams/readable:1329:21
+      1  100.0%        LazyCompile: *Readable.read node:internal/streams/readable:394:35
+      1  100.0%          LazyCompile: *resume_ node:internal/streams/readable:985:17
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.5%      Function: ^emitReadable node:internal/streams/readable:563:22
+      1  100.0%        LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+      1  100.0%          Function: ^Readable.push node:internal/streams/readable:227:35
+      1  100.0%            Function: ^parserOnMessageComplete node:_http_common:147:33
+      1    1.5%      Function: ^construct node:internal/streams/destroy:225:19
+      1  100.0%        Function: ^Readable node:internal/streams/readable:181:18
+      1  100.0%          Function: ^ReadStream node:internal/fs/streams:148:20
+      1  100.0%            LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+     57    3.9%    t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     14   24.6%      LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+     10   71.4%        LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+     10  100.0%          LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      9   90.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:148:27
+      1   10.0%            Function: ^handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:148:27
+      4   28.6%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      5    8.8%      LazyCompile: *set /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:461:6
+      5  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      5  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    7.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      3   75.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      3  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      3  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1   25.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      4    7.0%      LazyCompile: *get header /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:47:13
+      4  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      4  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    3.5%      LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:488:36
+      2  100.0%        LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:551:30
+      2  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:551:30
+      2  100.0%            LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:654:31
+      2    3.5%      LazyCompile: ~cache node:internal/http:26:15
+      2  100.0%        LazyCompile: ~utcDate node:internal/http:21:17
+      2  100.0%          LazyCompile: ~_storeHeader node:_http_outgoing:374:22
+      2  100.0%            LazyCompile: ~writeHead node:_http_server:269:19
+      2    3.5%      LazyCompile: *set type /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:310:11
+      2  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      2  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    3.5%      LazyCompile: *set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      2  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      2  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    3.5%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1   50.0%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1   50.0%        LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+      1  100.0%          Function: ^connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    3.5%      Function: ^<anonymous> node:internal/util:347:32
+      2  100.0%        Function: ^<anonymous> node:fs:197:10
+      1    1.8%      t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%        Function: ^<anonymous> node:internal/util:347:32
+      1  100.0%          Function: ^<anonymous> node:fs:197:10
+      1    1.8%      LazyCompile: ~toIdentifier /Users/tornado/code/node/nodejs-study/node_modules/resolve-path/node_modules/http-errors/index.js:256:23
+      1  100.0%        LazyCompile: ~forEachCode /Users/tornado/code/node/nodejs-study/node_modules/resolve-path/node_modules/http-errors/index.js:226:38
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~populateConstructorExports /Users/tornado/code/node/nodejs-study/node_modules/resolve-path/node_modules/http-errors/index.js:225:37
+      1    1.8%      LazyCompile: ~set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      1  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/delegates/index.js:91:40
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%      LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1    1.8%      LazyCompile: ~populateConstructorExports /Users/tornado/code/node/nodejs-study/node_modules/http-assert/node_modules/http-errors/index.js:264:37
+      1  100.0%        Function: ~<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/http-assert/node_modules/http-errors/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.8%      LazyCompile: *stat node:fs:1454:14
+      1  100.0%        Function: ^<anonymous> node:internal/util:346:24
+      1  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1    1.8%      LazyCompile: *set status /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:83:13
+      1  100.0%        LazyCompile: *set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1    1.8%      LazyCompile: *getHeaders node:_http_outgoing:626:59
+      1  100.0%        Function: ^get header /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:47:13
+      1  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%      LazyCompile: *first /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:24:15
+      1  100.0%        Function: ^onSocket /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:107:21
+      1  100.0%          Function: ^attachFinishedListener /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:91:33
+      1  100.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      1    1.8%      LazyCompile: *clearIncoming node:_http_server:749:23
+      1  100.0%        LazyCompile: *resOnFinish node:_http_server:788:21
+      1  100.0%          LazyCompile: *onFinish node:_http_outgoing:828:18
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.8%      LazyCompile: *Accepts.encoding.Accepts.encodings /Users/tornado/code/node/nodejs-study/node_modules/accepts/index.js:127:40
+      1  100.0%        LazyCompile: *acceptsEncodings /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/request.js:572:19
+      1  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1    1.8%      Function: ^toIdentifier /Users/tornado/code/node/nodejs-study/node_modules/toidentifier/index.js:24:23
+      1  100.0%        Function: ^forEachCode /Users/tornado/code/node/nodejs-study/node_modules/koa-send/node_modules/http-errors/index.js:265:38
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~populateConstructorExports /Users/tornado/code/node/nodejs-study/node_modules/koa-send/node_modules/http-errors/index.js:264:37
+      1    1.8%      Function: ^setHeader node:_http_outgoing:574:57
+      1  100.0%        Function: ^set /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:461:6
+      1  100.0%          Function: ^proto.<computed> /Users/tornado/code/node/nodejs-study/node_modules/delegates/index.js:39:25
+      1  100.0%            Function: ^send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1    1.8%      Function: ^onFinish /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:96:21
+      1  100.0%        Function: ^callback /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:53:20
+      1  100.0%          Function: ^onevent /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:81:26
+      1  100.0%            LazyCompile: *emit node:events:470:44
+      1    1.8%      Function: ^get /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:418:6
+      1  100.0%        Function: ^get type /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:382:11
+      1  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%      Function: ^createWriteWrap node:internal/stream_base_commons:109:25
+      1  100.0%        Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%          Function: ^Socket._writeGeneric node:net:769:42
+      1  100.0%            Function: ^Socket._writev node:net:801:36
+      1    1.8%      Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/parseurl/index.js:1:1
+      1    1.8%      Function: ^<anonymous> node:internal/fs/utils:686:40
+      1  100.0%        LazyCompile: *Readable.read node:internal/streams/readable:394:35
+      1  100.0%          Function: ^maybeReadMore_ node:internal/streams/readable:609:24
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     53    3.6%    Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     53  100.0%      Function: ^Socket._writeGeneric node:net:769:42
+     53  100.0%        Function: ^Socket._writev node:net:801:36
+     53  100.0%          Function: ^doWrite node:internal/streams/writable:398:17
+     38   71.7%            LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+     15   28.3%            Function: ^clearBuffer node:internal/streams/writable:529:21
+     45    3.1%    LazyCompile: *Readable node:internal/streams/readable:181:18
+     41   91.1%      LazyCompile: *Socket node:net:283:16
+     37   90.2%        LazyCompile: *onconnection node:net:1544:22
+      4    9.8%        Function: ^onconnection node:net:1544:22
+      2    4.4%      LazyCompile: *parserOnHeadersComplete node:_http_common:77:33
+      1    2.2%      LazyCompile: *ReadStream node:internal/fs/streams:148:20
+      1  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    2.2%      Function: ^ReadStream node:internal/fs/streams:148:20
+      1  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+     33    2.2%    LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+     18   54.5%      LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+     18  100.0%        LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+     15   83.3%          LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:148:27
+     15  100.0%            LazyCompile: *parserOnIncoming node:_http_server:852:26
+      3   16.7%          Function: ^handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:148:27
+      2   66.7%            LazyCompile: *emit node:events:470:44
+      1   33.3%            LazyCompile: *parserOnIncoming node:_http_server:852:26
+     12   36.4%      t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    9.1%      Function: ^serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      3  100.0%        Function: ^dispatch /Users/tornado/code/node/nodejs-study/node_modules/koa-compose/index.js:35:23
+      3  100.0%          Function: ^<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/koa-compose/index.js:31:19
+      3  100.0%            Function: ^handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+     33    2.2%    LazyCompile: *onwrite node:internal/streams/writable:425:17
+     22   66.7%      LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+     21   95.5%        LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+     20   95.2%          LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+     20  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    4.8%          LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+      1  100.0%            Function: ^connectionCorkNT node:_http_outgoing:796:26
+      1    4.5%        Function: ^Socket._writeGeneric node:net:769:42
+      1  100.0%          Function: ^Socket._write node:net:806:35
+      1  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+      4   12.1%      Function: ^afterWriteDispatched node:internal/stream_base_commons:155:30
+      2   50.0%        Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      2  100.0%          Function: ^Socket._writeGeneric node:net:769:42
+      2  100.0%            Function: ^Socket._writev node:net:801:36
+      2   50.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+      1   50.0%          LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%            LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1   50.0%          Function: ^Socket._writeGeneric node:net:769:42
+      1  100.0%            Function: ^Socket._write node:net:806:35
+      3    9.1%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      3  100.0%        LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+      3  100.0%          Function: ^connectionCorkNT node:_http_outgoing:796:26
+      3  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    6.1%      LazyCompile: *doWrite node:internal/streams/writable:398:17
+      2  100.0%        LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      2  100.0%          LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      2  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    6.1%      LazyCompile: *Socket._writev node:net:801:36
+      2  100.0%        Function: ^doWrite node:internal/streams/writable:398:17
+      2  100.0%          LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      2  100.0%            LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+     32    2.2%    LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     29   90.6%      LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+     29  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.1%      LazyCompile: *pipeOnDrainFunctionResult node:internal/streams/readable:817:44
+      1  100.0%        LazyCompile: *socketOnDrain node:_http_server:559:23
+      1  100.0%          LazyCompile: *emit node:events:470:44
+      1  100.0%            Function: ^afterWrite node:internal/streams/writable:487:20
+      1    3.1%      LazyCompile: *flow node:internal/streams/readable:1009:14
+      1  100.0%        Function: ^resume_ node:internal/streams/readable:985:17
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.1%      Function: ^maybeReadMore_ node:internal/streams/readable:609:24
+      1  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     32    2.2%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     25   78.1%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      6   24.0%        Function: ~<anonymous> node:crypto:1:1
+      6  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      6  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      3   12.0%        Function: ~<anonymous> node:http:1:1
+      3  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      2    8.0%        Function: ~<anonymous> node:tty:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      2    8.0%        Function: ~<anonymous> node:internal/cluster/primary:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2    8.0%        Function: ~<anonymous> node:child_process:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2    8.0%        Function: ~<anonymous> node:_http_client:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    4.0%        LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1  100.0%          LazyCompile: ~get node:crypto:287:8
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    4.0%        LazyCompile: ~lazyLoadStreams node:fs:2843:25
+      1  100.0%          LazyCompile: ~get ReadStream node:fs:2986:17
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    4.0%        Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    4.0%        Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    4.0%        Function: ~<anonymous> node:internal/child_process:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    4.0%        Function: ~<anonymous> node:assert:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    4.0%        Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    4.0%        Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      6   18.8%      LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      4   66.7%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      4  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      4  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2   33.3%        LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      2  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      1    3.1%      Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     26    1.8%    Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     26  100.0%      Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     22   84.6%        Function: ^Socket._writeGeneric node:net:769:42
+     22  100.0%          Function: ^Socket._write node:net:806:35
+     22  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+      4   15.4%        LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      4  100.0%          LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      4  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     21    1.4%    LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+     21  100.0%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+     20   95.2%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+     20  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    4.8%        LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+      1  100.0%          Function: ^connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     21    1.4%    LazyCompile: *createUnsafeBuffer node:internal/buffer:1059:28
+     21  100.0%      LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     19   90.5%        LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+     19  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    9.5%        Function: ^maybeReadMore_ node:internal/streams/readable:609:24
+      2  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     20    1.4%    LazyCompile: *endReadable node:internal/streams/readable:1329:21
+     20  100.0%      LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     16   80.0%        LazyCompile: *resume_ node:internal/streams/readable:985:17
+     16  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      4   20.0%        LazyCompile: *emitReadable_ node:internal/streams/readable:574:23
+      4  100.0%          LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+      4  100.0%            LazyCompile: *wrapper node:fs:658:19
+     19    1.3%    LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     18    1.2%    LazyCompile: *Readable.on node:internal/streams/readable:875:33
+      9   50.0%      LazyCompile: *connectionListenerInternal node:_http_server:443:36
+      4   44.4%        LazyCompile: *connectionListener node:_http_server:437:28
+      4  100.0%          LazyCompile: *onconnection node:net:1544:22
+      4   44.4%        Function: ^defaultTriggerAsyncIdScope node:internal/async_hooks:456:36
+      4  100.0%          Function: ^connectionListener node:_http_server:437:28
+      4  100.0%            LazyCompile: *emit node:events:470:44
+      1   11.1%        LazyCompile: *defaultTriggerAsyncIdScope node:internal/async_hooks:456:36
+      1  100.0%          Function: ^connectionListener node:_http_server:437:28
+      1  100.0%            LazyCompile: *onconnection node:net:1544:22
+      3   16.7%      LazyCompile: *parserOnIncoming node:_http_server:852:26
+      3  100.0%        LazyCompile: *parserOnHeadersComplete node:_http_common:77:33
+      2   11.1%      LazyCompile: *set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      2  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      2  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2   11.1%      LazyCompile: *Readable.pipe node:internal/streams/readable:654:35
+      1   50.0%        LazyCompile: *respond /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:229:17
+      1  100.0%          Function: ^handleResponse /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:166:28
+      1   50.0%        Function: ^respond /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:229:17
+      1  100.0%          Function: ^handleResponse /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:166:28
+      1    5.6%      LazyCompile: *once node:events:658:44
+      1  100.0%        Function: ^set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      1  100.0%          t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1    5.6%      Function: ^Readable.pipe node:internal/streams/readable:654:35
+      1  100.0%        Function: ^respond /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:229:17
+      1  100.0%          Function: ^handleResponse /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:166:28
+     15    1.0%    LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     15  100.0%      LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2   13.3%        LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:412:29
+      2  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      2  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2   13.3%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:223:29
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%        LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:451:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%        LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:173:26
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%        Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    6.7%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.7%        Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+
+    352   11.1%  T _semaphore_destroy
+    319   90.6%    LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+    317   99.4%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+    311   98.1%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+    311  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      6    1.9%        LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+      6  100.0%          Function: ^connectionCorkNT node:_http_outgoing:796:26
+      6  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     31    8.8%    LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+     29   93.5%      LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+     29  100.0%        Function: ^connectionCorkNT node:_http_outgoing:796:26
+     29  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    6.5%      Function: ^Writable.uncork node:internal/streams/writable:341:37
+      2  100.0%        Function: ^connectionCorkNT node:_http_outgoing:796:26
+      2  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+
+    146    4.6%  T _posix_spawnattr_setflags
+
+    121    3.8%  T _connect$NOCANCEL
+     77   63.6%    LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     72   93.5%      LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+     72  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      5    6.5%      Function: ^maybeReadMore_ node:internal/streams/readable:609:24
+      4   80.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1   20.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+     16   13.2%    LazyCompile: *stat node:fs:1454:14
+      9   56.3%      LazyCompile: *<anonymous> node:internal/util:346:24
+      9  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      9  100.0%          LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      9  100.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      7   43.8%      Function: ^<anonymous> node:internal/util:346:24
+      7  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      7  100.0%          LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      7  100.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+     13   10.7%    LazyCompile: *open node:fs:545:14
+      9   69.2%      LazyCompile: *constructNT node:internal/streams/destroy:250:21
+      9  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      4   30.8%      LazyCompile: *_construct node:internal/fs/streams:42:20
+      4  100.0%        Function: ^constructNT node:internal/streams/destroy:250:21
+      4  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      6    5.0%    LazyCompile: *close node:internal/fs/streams:108:15
+      5   83.3%      LazyCompile: *destroy node:internal/streams/destroy:32:17
+      5  100.0%        LazyCompile: *endReadableNT node:internal/streams/readable:1339:23
+      5  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1   16.7%      Function: ^ReadStream._destroy node:internal/fs/streams:282:41
+      1  100.0%        Function: ^_destroy node:internal/streams/destroy:70:18
+      1  100.0%          Function: ^destroy node:internal/streams/destroy:32:17
+      1  100.0%            Function: ^endReadableNT node:internal/streams/readable:1339:23
+      5    4.1%    LazyCompile: *close node:fs:511:15
+      5  100.0%      Function: ^close node:internal/fs/streams:108:15
+      5  100.0%        LazyCompile: *destroy node:internal/streams/destroy:32:17
+      5  100.0%          LazyCompile: *endReadableNT node:internal/streams/readable:1339:23
+      5  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+
+     95    3.0%  T _mach_port_extract_member
+     45   47.4%    LazyCompile: *Socket._writev node:net:801:36
+     45  100.0%      Function: ^doWrite node:internal/streams/writable:398:17
+     45  100.0%        LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+     44   97.8%          LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+     44  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.2%          LazyCompile: *end node:_http_outgoing:833:45
+      1  100.0%            Function: ^onend node:internal/streams/readable:691:17
+     42   44.2%    LazyCompile: *doWrite node:internal/streams/writable:398:17
+     42  100.0%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+     42  100.0%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+     42  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      8    8.4%    LazyCompile: *writevGeneric node:internal/stream_base_commons:122:23
+      8  100.0%      Function: ^Socket._writeGeneric node:net:769:42
+      8  100.0%        Function: ^Socket._writev node:net:801:36
+      8  100.0%          Function: ^doWrite node:internal/streams/writable:398:17
+      8  100.0%            LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+
+     89    2.8%  T _mach_port_insert_member
+     12   13.5%    LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     12  100.0%      LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+     12  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      4    4.5%    t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   25.0%      LazyCompile: *set body /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/response.js:134:11
+      1  100.0%        t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   25.0%      LazyCompile: *parserOnHeadersComplete node:_http_common:77:33
+      1   25.0%      LazyCompile: *debug /Users/tornado/code/node/nodejs-study/node_modules/koa-send/node_modules/debug/src/common.js:66:17
+      1  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%          LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1  100.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      1   25.0%      LazyCompile: *Readable.on node:internal/streams/readable:875:33
+      1  100.0%        LazyCompile: *connectionListenerInternal node:_http_server:443:36
+      1  100.0%          LazyCompile: *connectionListener node:_http_server:437:28
+      1  100.0%            LazyCompile: *onconnection node:net:1544:22
+      1    1.1%    LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+      1  100.0%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%    LazyCompile: *resolve node:path:1091:10
+      1  100.0%      LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%        LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1  100.0%          LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      1  100.0%            Function: ^handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:148:27
+      1    1.1%    LazyCompile: *open node:fs:545:14
+      1  100.0%      LazyCompile: *constructNT node:internal/streams/destroy:250:21
+      1  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%    LazyCompile: *onwrite node:internal/streams/writable:425:17
+      1  100.0%      LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+      1  100.0%        LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%          LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%    LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1  100.0%      LazyCompile: *write_ node:_http_outgoing:730:16
+      1  100.0%        LazyCompile: *ondata node:internal/streams/readable:752:18
+      1  100.0%          LazyCompile: *readableAddChunk node:internal/streams/readable:236:26
+      1  100.0%            LazyCompile: *wrapper node:fs:658:19
+      1    1.1%    LazyCompile: *close node:internal/fs/streams:108:15
+      1  100.0%      LazyCompile: *destroy node:internal/streams/destroy:32:17
+      1  100.0%        LazyCompile: *endReadableNT node:internal/streams/readable:1339:23
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+
+     78    2.5%  /usr/lib/system/libsystem_malloc.dylib
+     17   21.8%    LazyCompile: *createUnsafeBuffer node:internal/buffer:1059:28
+     17  100.0%      LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     17  100.0%        LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+     17  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      5    6.4%    LazyCompile: *wrapper node:fs:658:19
+      4    5.1%    t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   25.0%      LazyCompile: *onwrite node:internal/streams/writable:425:17
+      1  100.0%        LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+      1  100.0%          LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%            LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1   25.0%      LazyCompile: *Readable.read node:internal/streams/readable:394:35
+      1  100.0%        LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1   25.0%      LazyCompile: *Accepts.encoding.Accepts.encodings /Users/tornado/code/node/nodejs-study/node_modules/accepts/index.js:127:40
+      1  100.0%        LazyCompile: *acceptsEncodings /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/request.js:572:19
+      1  100.0%          LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1   25.0%      Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%        Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%          Function: ^allocUnsafeSlow node:buffer:382:50
+      1  100.0%            Function: ^ReadStream._read node:internal/fs/streams:234:38
+      1    1.3%    LazyCompile: ~WriteStream._refreshSize node:tty:127:46
+      1  100.0%      LazyCompile: ~<anonymous> node:internal/bootstrap/switches/is_main_thread:132:28
+      1  100.0%        Function: ^emit node:events:470:44
+      1    1.3%    LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+      1  100.0%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.3%    LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%      t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.3%    LazyCompile: *doWrite node:internal/streams/writable:398:17
+      1  100.0%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%        LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.3%    LazyCompile: *connectionListenerInternal node:_http_server:443:36
+      1  100.0%      LazyCompile: *connectionListener node:_http_server:437:28
+      1  100.0%        LazyCompile: *onconnection node:net:1544:22
+      1    1.3%    LazyCompile: *Socket node:net:283:16
+      1  100.0%      LazyCompile: *onconnection node:net:1544:22
+      1    1.3%    LazyCompile: *Readable.resume node:internal/streams/readable:964:37
+      1  100.0%      LazyCompile: *Readable.on node:internal/streams/readable:875:33
+      1  100.0%        LazyCompile: *Readable.pipe node:internal/streams/readable:654:35
+      1  100.0%          LazyCompile: *handleResponse /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:166:28
+      1    1.3%    Function: ^callback /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:53:20
+      1  100.0%      Function: ^onevent /Users/tornado/code/node/nodejs-study/node_modules/ee-first/index.js:81:26
+      1  100.0%        LazyCompile: *onFinish node:_http_outgoing:828:18
+      1  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.3%    Function: ^<anonymous> node:fs:197:10
+
+     47    1.5%  T _mach_vm_protect
+
+     44    1.4%  T node::fs::NewFSReqCallback(v8::FunctionCallbackInfo<v8::Value> const&)
+     27   61.4%    LazyCompile: *Readable.read node:internal/streams/readable:394:35
+     26   96.3%      LazyCompile: *maybeReadMore_ node:internal/streams/readable:609:24
+     26  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.7%      Function: ^maybeReadMore_ node:internal/streams/readable:609:24
+      1  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+     12   27.3%    LazyCompile: *open node:fs:545:14
+      9   75.0%      LazyCompile: *constructNT node:internal/streams/destroy:250:21
+      9  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      3   25.0%      LazyCompile: *_construct node:internal/fs/streams:42:20
+      3  100.0%        Function: ^constructNT node:internal/streams/destroy:250:21
+      3  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      2    4.5%    LazyCompile: *stat node:fs:1454:14
+      2  100.0%      Function: ^<anonymous> node:internal/util:346:24
+      2  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      2  100.0%          LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      2  100.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      2    4.5%    LazyCompile: *close node:internal/fs/streams:108:15
+      2  100.0%      LazyCompile: *destroy node:internal/streams/destroy:32:17
+      2  100.0%        LazyCompile: *endReadableNT node:internal/streams/readable:1339:23
+      2  100.0%          LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.3%    Function: ^stat node:fs:1454:14
+      1  100.0%      LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%        Function: ^serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1  100.0%          Function: ^dispatch /Users/tornado/code/node/nodejs-study/node_modules/koa-compose/index.js:35:23
+      1  100.0%            Function: ^<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/koa-compose/index.js:31:19
+
+     36    1.1%  T _sigprocmask
+      3    8.3%    LazyCompile: *onwrite node:internal/streams/writable:425:17
+      2   66.7%      LazyCompile: *writeGeneric node:internal/stream_base_commons:147:22
+      2  100.0%        LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      2  100.0%          LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+      2  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1   33.3%      LazyCompile: *clearBuffer node:internal/streams/writable:529:21
+      1  100.0%        LazyCompile: *Writable.uncork node:internal/streams/writable:341:37
+      1  100.0%          Function: ^connectionCorkNT node:_http_outgoing:796:26
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.8%    LazyCompile: ~removeListener node:events:687:28
+      1  100.0%      LazyCompile: ~cleanup node:internal/streams/readable:699:19
+      1  100.0%        LazyCompile: ~onunpipe node:internal/streams/readable:681:20
+      1  100.0%          Function: ^emit node:events:470:44
+      1  100.0%            LazyCompile: ~Readable.unpipe node:internal/streams/readable:840:37
+      1    2.8%    LazyCompile: ~readFileSync node:fs:450:22
+      1  100.0%      LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    2.8%    LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.8%    LazyCompile: ~pause node:internal/streams/readable:725:17
+      1  100.0%      Function: ^ondata node:internal/streams/readable:752:18
+      1  100.0%        Function: ^emit node:events:470:44
+      1  100.0%          LazyCompile: ~addChunk node:internal/streams/readable:304:18
+      1  100.0%            Function: ^readableAddChunk node:internal/streams/readable:236:26
+      1    2.8%    LazyCompile: ~onerror /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/context.js:107:10
+      1  100.0%      Function: ^onerror /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:165:21
+      1  100.0%        Function: ^runInAsyncScope node:async_hooks:195:18
+      1  100.0%          Function: ^listener /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:162:21
+      1  100.0%            Function: ^onFinish /Users/tornado/code/node/nodejs-study/node_modules/on-finished/index.js:96:21
+      1    2.8%    LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      1  100.0%      LazyCompile: ~processTimers node:internal/timers:487:25
+      1    2.8%    LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%      LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%        LazyCompile: ~cache node:internal/http:26:15
+      1  100.0%          LazyCompile: *_storeHeader node:_http_outgoing:374:22
+      1  100.0%            LazyCompile: *writeHead node:_http_server:269:19
+      1    2.8%    LazyCompile: ~endReadable node:internal/streams/readable:1329:21
+      1  100.0%      Function: ^Readable.read node:internal/streams/readable:394:35
+      1  100.0%        Function: ^flow node:internal/streams/readable:1009:14
+      1  100.0%          Function: ^emitReadable_ node:internal/streams/readable:574:23
+      1  100.0%            LazyCompile: ~onEofChunk node:internal/streams/readable:533:20
+      1    2.8%    LazyCompile: ~depd /Users/tornado/code/node/nodejs-study/node_modules/http-assert/node_modules/depd/index.js:105:15
+      1  100.0%      Function: ~<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/http-assert/node_modules/http-errors/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%    LazyCompile: ~createDebug /Users/tornado/code/node/nodejs-study/node_modules/koa-mount/node_modules/debug/src/common.js:60:22
+      1  100.0%      Function: ~<anonymous> /Users/tornado/code/node/nodejs-study/node_modules/koa-mount/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%    LazyCompile: ~Socket.end node:net:608:32
+      1  100.0%      LazyCompile: ~Socket.destroySoon node:net:656:40
+      1  100.0%        LazyCompile: ~resOnFinish node:_http_server:788:21
+      1  100.0%          Function: ^emit node:events:470:44
+      1  100.0%            LazyCompile: ~onFinish node:_http_outgoing:828:18
+      1    2.8%    LazyCompile: ~IncomingMessage node:_http_incoming:51:25
+      1  100.0%      LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    2.8%    LazyCompile: *resolve node:path:1091:10
+      1  100.0%      LazyCompile: *resolvePath /Users/tornado/code/node/nodejs-study/node_modules/resolve-path/index.js:45:22
+      1  100.0%        LazyCompile: *send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%          LazyCompile: *serve /Users/tornado/code/node/nodejs-study/node_modules/koa-static/index.js:39:33
+      1  100.0%            LazyCompile: *handleRequest /Users/tornado/code/node/nodejs-study/node_modules/koa/lib/application.js:162:16
+      1    2.8%    LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.8%    Function: ^emit node:events:470:44
+      1    2.8%    Function: ^<anonymous> node:internal/validators:236:42
+      1  100.0%      Function: ^ReadStream node:internal/fs/streams:148:20
+      1  100.0%        Function: ^createReadStream node:fs:2869:26
+      1  100.0%          Function: ^send /Users/tornado/code/node/nodejs-study/node_modules/koa-send/index.js:50:21
+      1  100.0%            t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+
+     32    1.0%  T ___bsdthread_terminate
+      1    3.1%    LazyCompile: ~Socket._writeGeneric node:net:769:42
+      1  100.0%      LazyCompile: ~Socket._write node:net:806:35
+      1  100.0%        LazyCompile: ~doWrite node:internal/streams/writable:398:17
+      1  100.0%          LazyCompile: ~clearBuffer node:internal/streams/writable:529:21
+      1  100.0%            LazyCompile: *connectionCorkNT node:_http_outgoing:796:26
+

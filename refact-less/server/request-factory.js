@@ -39,7 +39,7 @@ function factory(config) {
   compoile: 提前编译
   request: 处理请求
  */
-factory.registprotocol = (protocol, requestor) => {
+factory.registerProtocol = (protocol, requestor) => {
   requestors[protocol] = requestor
 }
 

@@ -1,6 +1,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/list/protocol.proto":
+/*!*********************************!*\
+  !*** ./src/list/protocol.proto ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = "// message ExtendInfo {\n//   required string info = 1;\n// }\nmessage List {\n  required int32 id = 1;\n  required string title = 2;\n  required int32 price = 3;\n  // optional ExtendInfo extendInfo = 4;\n}\n\nmessage Response {\n  repeated  List list = 1;\n}\n\nmessage Request {\n  required string sort = 1;\n  optional string order = 2;\n}"
+
+/***/ }),
+
 /***/ "./src/list/data.js":
 /*!**************************!*\
   !*** ./src/list/data.js ***!
@@ -12,7 +22,7 @@ module.exports = {
     protocol: 'list-rpc',
     ip: '127.0.0.1',
     port: 4003,
-    protocolFile:  __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '/Users/tornado/code/node/nodejs-study/refact-less/workplace/src/list/protocol/test.proto'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+    protocolFile:  __webpack_require__(/*! ./src/list/protocol.proto */ "./src/list/protocol.proto"),
     responseStruct: 'Response',
     requestStruct: 'Request',
     then: res => res 
@@ -23,6 +33,8 @@ module.exports = {
     then: res => res
   }
 }
+
+console.log(__webpack_require__(/*! ./src/list/protocol.proto */ "./src/list/protocol.proto"))
 
 /***/ })
 

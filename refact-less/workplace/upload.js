@@ -6,8 +6,8 @@ const mfs = new (require('memory-fs'))
 const { WebpackOptionsValidationError } = require('webpack')
 module.exports = function(businessName, dataJSPath, templatePath) {
   // businessName 创建一个business的文件夹
-  const path = mkdirp.sync(businessName)
-  console.log(path+'/'+templatePath.split('/').pop(), templatePath, dataJSPath)
+  const path = mkdirp.sync(__dirname+ '/../business/' + businessName)
+  // console.log(path+'/'+templatePath.split('/').pop(), templatePath, dataJSPath)
   //dataJSPath 、templatePath 全部要以文本形式
   fs.createReadStream(templatePath).pipe(fs.createWriteStream(path+'/'+templatePath.split('/').pop()))
 
@@ -17,15 +17,10 @@ module.exports = function(businessName, dataJSPath, templatePath) {
     devtool: false,
     target: 'node',
     entry: dataJSPath,
-    resolve: {
-      fallback: {
-        fs: false,
-      },
-    },
     module:{
       rules: [
         {
-          test: /.proto$/,
+          test: /\.proto$/,
           use: 'text-loader' 
         }
       ]
@@ -37,18 +32,17 @@ module.exports = function(businessName, dataJSPath, templatePath) {
   })
 
   compileTask.outputFileSystem = mfs
-//   compileTask.run(function(err) {
-//     if (err) { return }
-//     const content = mfs.readFileSync('/whatever/data.js')
-//     fs.writeFileSync(__dirname + '/../business/' + businessName + '/data.js', content);
-// })
-  compileTask.run(err => {
-    if (!err) {
-      const content = mfs.readFileSync('/whatever/data.js')
-      // console.log('content:', content)
-      // fs.createWriteStream(path+'/'+ dataJSPath.split('/').pop()).write(content)
-      fs.writeFileSync(path+'/'+ dataJSPath.split('/').pop(), content)
-    }
-  })
+  compileTask.run(function(err) {
+    if (err) { return }
+    const content = mfs.readFileSync('/whatever/data.js')
+    fs.writeFileSync(__dirname + '/../business/' + businessName + '/data.js', content);
+})
+  // compileTask.run(err => {
+  //   if (!err) {
+  //     const content = mfs.readFileSync('/whatever/data.js')
+  //     // fs.createWriteStream(path+'/'+ dataJSPath.split('/').pop()).write(content)
+  //     fs.writeFileSync(path+'/'+ dataJSPath.split('/').pop(), content)
+  //   }
+  // })
 
 }

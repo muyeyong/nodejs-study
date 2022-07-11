@@ -3,7 +3,7 @@ module.exports = {
     protocol: 'list-rpc',
     ip: '127.0.0.1',
     port: 4003,
-    protocolFile:  require(__dirname+'/protocol/test.proto'),
+    protocolFile:  require(__dirname+'/protocol.proto'),
     responseStruct: 'Response',
     requestStruct: 'Request',
     then: res => res 
@@ -14,3 +14,5 @@ module.exports = {
     then: res => res
   }
 }
+
+console.log(require(__dirname+'/protocol.proto'))

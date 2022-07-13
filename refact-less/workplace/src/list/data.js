@@ -14,5 +14,3 @@ module.exports = {
     then: res => res
   }
 }
-
-console.log(require(__dirname+'/protocol.proto'))

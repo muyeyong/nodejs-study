@@ -3,7 +3,6 @@ const mkdirp = require('mkdirp')
 const fs = require('fs')
 const webpack = require('webpack')
 const mfs = new (require('memory-fs'))
-const { WebpackOptionsValidationError } = require('webpack')
 module.exports = function(businessName, dataJSPath, templatePath) {
   // businessName 创建一个business的文件夹
   const path = mkdirp.sync(__dirname+ '/../business/' + businessName)

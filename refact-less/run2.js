@@ -22,8 +22,9 @@ module.exports = function (app) {
 
     Object.keys(app).forEach(routepath => {
 
-      console.log(app[routepath].data)
+    //   console.log(app[routepath].data)
       console.log(vm.runInContext(app[routepath].data, vm.createContext({})))
+      return
 
         const dataConfig = vm.runInContext(app[routepath].data, vm.createContext({})) //eval(app[routepath].data);
         if (!dataConfig) return

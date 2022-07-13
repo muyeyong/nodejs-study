@@ -34,7 +34,6 @@ module.exports = {
   }
 }
 
-console.log(__webpack_require__(/*! ./src/list/protocol.proto */ "./src/list/protocol.proto"))
 
 /***/ })
 

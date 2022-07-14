@@ -11,6 +11,15 @@
 2022-07-13
   运行webpack结果为undefine，基本确认是webpack打包的问题
   __webpack_exports__ 没有导出，想一想为什么
+2022-07-14
+  找到解决办法了，webapck配置问题 global 为 null
+  https://segmentfault.com/q/1010000012933464
+
+  上面的还是不行，但是我还解决了
+  let dataConfig = {}
+  vm.runInContext(app[routepath].data, vm.createContext({ global: dataConfig }))
+  console.log(dataConfig1)
+  将global指定为一个变量，就可以通过这个变量获取需要值了
 
 ## 怎样下沉 怎样less 怎样设计一个组件 ？
   1: 现将具体实现的功能点全部列举出来

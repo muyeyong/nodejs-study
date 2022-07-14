@@ -15,6 +15,7 @@ module.exports = function(businessName, dataJSPath, templatePath) {
     mode: 'development',
     devtool: false,
     target: 'node',
+    node: { global: true },
     entry: dataJSPath,
     module:{
       rules: [
@@ -26,7 +27,10 @@ module.exports = function(businessName, dataJSPath, templatePath) {
     },
     output: {
       path: '/whatever',
-      filename: 'data.js'
+      filename: 'data.js',
+      library: {
+        type: 'umd'
+      },
     }
   })
 

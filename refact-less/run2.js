@@ -3,6 +3,7 @@ const requestFactory = require('./server/request-factory')
 const createTemplate = require('./create-template');
 const vm = require('vm')
 
+
 requestFactory.registerProtocol('list-rpc',
     require('./server/requestors/rpc')
 );
@@ -23,7 +24,14 @@ module.exports = function (app) {
     Object.keys(app).forEach(routepath => {
 
     //   console.log(app[routepath].data)
-      console.log(vm.runInContext(app[routepath].data, vm.createContext({})))
+        // console.log(eval(app[routepath].data)) 
+        // console.log(require(app[routepath].data))
+
+        // console.log(require('./business/list/data'))
+
+    let dataConfig1 = {}
+      vm.runInContext(app[routepath].data, vm.createContext({ global: dataConfig1 }))
+      console.log(dataConfig1)
       return
 
         const dataConfig = vm.runInContext(app[routepath].data, vm.createContext({})) //eval(app[routepath].data);

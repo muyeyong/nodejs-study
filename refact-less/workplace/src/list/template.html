@@ -23,11 +23,11 @@
     </select>
   </div>
   <ul>
-    ${data && .data.map(item => {
-      return <li key={item.id}>
+    ${data && data.map(item => {
+      return `<li key={item.id}>
         <span>{item.title}</span>
         <span>{item.price}</span>
-      </li>
+      </li>`
     })}
   </ul>
 </body>

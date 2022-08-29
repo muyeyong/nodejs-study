@@ -8,7 +8,7 @@ module.exports = function(businessName, dataJSPath, templatePath) {
   const path = mkdirp.sync(__dirname+ '/../business/' + businessName)
   // console.log(path+'/'+templatePath.split('/').pop(), templatePath, dataJSPath)
   //dataJSPath 、templatePath 全部要以文本形式
-  fs.createReadStream(templatePath).pipe(fs.createWriteStream(path+'/'+templatePath.split('/').pop()))
+  fs.createReadStream(templatePath).pipe(fs.createWriteStream(path+'/template.tpl'))
 
   // 使用webpack打包.proto 文件，遇到对应的包怎么用了？
   const compileTask = webpack({
@@ -40,12 +40,4 @@ module.exports = function(businessName, dataJSPath, templatePath) {
     const content = mfs.readFileSync('/whatever/data.js')
     fs.writeFileSync(__dirname + '/../business/' + businessName + '/data.js', content);
 })
-  // compileTask.run(err => {
-  //   if (!err) {
-  //     const content = mfs.readFileSync('/whatever/data.js')
-  //     // fs.createWriteStream(path+'/'+ dataJSPath.split('/').pop()).write(content)
-  //     fs.writeFileSync(path+'/'+ dataJSPath.split('/').pop(), content)
-  //   }
-  // })
-
 }

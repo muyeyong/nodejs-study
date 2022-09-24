@@ -14,7 +14,7 @@ const server = net.createServer((socket) => {
     setTimeout(() => {
       console.log('server', buffer.toString(),  buffer.readInt16BE())
       const id = buffer.toString() // buffer.toString() 怎么样 -> 使用什么样的编码，就怎样解码
-      socket.write(Buffer.from(menus[id])) 
+      socket.write(Buffer.from(menus[id]))
     }, 2000)
   })
 })

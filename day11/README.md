@@ -1,6 +1,6 @@
 ## 使用React实现前后端同构
 
-将Raect代码转换成字符串, 通过ReacrDom.renderToString(<A />)
+将React代码转换成字符串, 通过ReactDom.renderToString(<A />)
 怎么将function 组件转换成 string，上面那个方法只能转换class组件
   如果要将function 组件使用 renderToString可以这样写 ===> renderToString(React.creteElement(App))
 

@@ -8,7 +8,7 @@
     protocolFile:  protocol 文件地址
     requestStruct: 请求结构
     responseStruct: 响应结构
-    compire: 编译函数，可以提前处理
+    compile: 编译函数，可以提前处理
     request: 请求，传入数据
     before: 数据提前处理钩子函数
     then: 请求完钩子函数
@@ -36,7 +36,7 @@ function factory(config) {
  处理不同的请求包，请求包的包头和内容格式不尽相同
 
  requestor包含: 
-  compoile: 提前编译
+  compile: 提前编译
   request: 处理请求
  */
 factory.registerProtocol = (protocol, requestor) => {
